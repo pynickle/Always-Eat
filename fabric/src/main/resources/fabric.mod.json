@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "always_eat",
+  "version": "${version}",
+  "name": "Always Eat",
+  "description": "You can keep eating even when you're full",
+  "authors": [
+    "ENC_Euphony"
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "MIT",
+  "icon": "assets/always_eat/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.euphony.always_eat.fabric.AlwaysEatFabric"
+    ],
+    "client": [
+      "com.euphony.always_eat.fabric.client.AlwaysEatFabricClient"
+    ]
+  },
+  "mixins": [
+    "always_eat.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.6"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

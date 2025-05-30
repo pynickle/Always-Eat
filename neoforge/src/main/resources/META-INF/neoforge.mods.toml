@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "always_eat"
+version = "${version}"
+displayName = "Always Eat"
+authors = "ENC_Euphony"
+description = '''
+You can keep eating even when you're full
+'''
+#logoFile = ""
+
+[[dependencies.always_eat]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.always_eat]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.always_eat]]
+modId = "architectury"
+type = "required"
+versionRange = "[13.0.6,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "always_eat.mixins.json"
