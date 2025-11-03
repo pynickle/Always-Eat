@@ -14,7 +14,7 @@ public final class AlwaysEatFabric implements ModInitializer {
             if(AlwaysEatEvent.eat(player, hand)) {
                 return InteractionResult.SUCCESS;
             } else {
-                return InteractionResult.CONSUME;
+                return InteractionResult.PASS;
             }
         });
     }
