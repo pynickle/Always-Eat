@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/pynickle/Always-Eat/compare/v1.0.0...v1.1.0) (2025-12-10)
+
+### ✨ Features
+
+* release 1.21.11 ([2267f13](https://github.com/pynickle/Always-Eat/commit/2267f13ce770e0ed3f367353a8e3edb31b52e630))
+
 ## 1.0.0 (2025-12-10)
 
 ### ✨ Features
