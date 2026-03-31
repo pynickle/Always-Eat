@@ -1,56 +1,44 @@
 plugins {
-    id 'dev.architectury.loom' version '1.13-SNAPSHOT' apply false
-    id 'architectury-plugin' version '3.4-SNAPSHOT'
-    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id "architectury-plugin" version "3.5-SNAPSHOT"
+    id "dev.architectury.loom-no-remap" version "1.14-SNAPSHOT" apply false
+    id "maven-publish"
 }
 
 architectury {
-    minecraft = project.minecraft_version
-}
-
-allprojects {
-    group = rootProject.maven_group
-    version = rootProject.mod_version
+    minecraft = rootProject.minecraft_version
 }
 
 subprojects {
-    apply plugin: 'dev.architectury.loom'
-    apply plugin: 'architectury-plugin'
-    apply plugin: 'maven-publish'
-
-    base {
-        archivesName = "$rootProject.archives_name-$project.name"
+    if (it.name != "neoforge_coremods") {
+        apply plugin: "dev.architectury.loom-no-remap"
     }
 
     repositories {
+        maven { url "https://maven.neoforged.net/releases/" }
+    }
+}
+
+allprojects {
+    apply plugin: 'java'
+    
+    version = rootProject.mod_version
+
+    base {
+        archivesName = rootProject.archives_name
     }
 
-    dependencies {
-        minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
-        mappings loom.officialMojangMappings()
-    }
+    group = rootProject.maven_group
 
-    java {
-        withSourcesJar()
-
-        sourceCompatibility = JavaVersion.VERSION_25
-        targetCompatibility = JavaVersion.VERSION_25
+    if (it.name != "neoforge_coremods") {
+        apply plugin: 'architectury-plugin'
     }
 
     tasks.withType(JavaCompile).configureEach {
-        it.options.release = 25
-    }
+        options.encoding = "UTF-8"
 
-    // Configure Maven publishing.
-    publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                artifactId = base.archivesName.get()
-                from components.java
-            }
-        }
-
-        repositories {
-        }
+        // The Minecraft launcher currently installs Java 8 for users, so your mod probably wants to target Java 8 too
+        // JDK 9 introduced a new way of specifying this that will make sure no newer classes or methods are used.
+        // We'll use that if it's available, but otherwise we'll use the older option.
+        options.release = 25
     }
 }
