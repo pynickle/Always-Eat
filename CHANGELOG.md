@@ -1,3 +1,13 @@
+## [2.1.0](https://github.com/pynickle/Always-Eat/compare/v2.0.0...v2.1.0) (2026-04-05)
+
+### ✨ Features
+
+* trigger ([7f49a14](https://github.com/pynickle/Always-Eat/commit/7f49a14dd7acce0551fdb61e2d1c71ab4b823375))
+
+### 🔧 Miscellaneous Changes
+
+* update releaserc ([587e0d9](https://github.com/pynickle/Always-Eat/commit/587e0d913ada7e2e77f6764ecc59b99d81dd475a))
+
 ## [2.0.0](https://github.com/pynickle/Always-Eat/compare/v1.1.0...v2.0.0) (2026-03-31)
 
 ### ⚠ BREAKING CHANGES
