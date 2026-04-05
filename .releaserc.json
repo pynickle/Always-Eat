@@ -47,10 +47,10 @@
     [
       "semantic-release-minecraft",
       {
-        "game_versions": ["26.1"],
+        "game_versions": ["26.1", "26.1.1"],
         "mod_loaders": "${ loader }",
         "display_name": "[${ name } 26.1] ${ nextRelease.version }",
-        "glob": "${ loader }/build/libs/always_eat-${ loader }-${ nextRelease.version }.jar",
+        "glob": "${ loader }/build/libs/always_eat-${ nextRelease.version }.jar",
         "strategies": [
           {
             "loader": "fabric",
