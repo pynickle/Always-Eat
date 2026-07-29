@@ -16,7 +16,7 @@ You can keep eating even when you're full
 [[dependencies.always_eat]]
 modId = "neoforge"
 type = "required"
-versionRange = "[26.1.0-beta,)"
+versionRange = "[26.2.0-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
