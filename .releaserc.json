@@ -47,9 +47,9 @@
     [
       "semantic-release-minecraft",
       {
-        "game_versions": ["26.1", "26.1.1"],
+        "game_versions": ["26.3"],
         "mod_loaders": "${ loader }",
-        "display_name": "[${ name } 26.1] ${ nextRelease.version }",
+        "display_name": "[${ name } 26.3] ${ nextRelease.version }",
         "glob": "${ loader }/build/libs/always_eat-${ nextRelease.version }.jar",
         "strategies": [
           {
