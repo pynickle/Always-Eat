@@ -1,3 +1,17 @@
+## [3.1.0](https://github.com/pynickle/Always-Eat/compare/v3.0.0...v3.1.0) (2026-09-17)
+
+### ⚠ BREAKING CHANGES
+
+* port to 26.3
+
+### ✨ Features
+
+* port to 26.3 ([937da17](https://github.com/pynickle/Always-Eat/commit/937da1751a44ef419c52db9efb29db1c212308e6))
+
+### 🔧 Miscellaneous Changes
+
+* fix release ([f61be00](https://github.com/pynickle/Always-Eat/commit/f61be00f02baec7b3281068e132121b4f283e2ca))
+
 ## [3.0.0](https://github.com/pynickle/Always-Eat/compare/v2.1.0...v3.0.0) (2026-07-29)
 
 ## [2.1.0](https://github.com/pynickle/Always-Eat/compare/v2.0.0...v2.1.0) (2026-04-05)
